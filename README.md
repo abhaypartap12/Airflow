@@ -1,7 +1,7 @@
 # Airflow
 Scripts of Airflow
 
-1.) Alert_Mail.py<br/>
+1.) Alert_Mail.py - send alert email using airflow<br/>
 
    -> It can be used in the case when we want to monitor some table values and if it become less/more than the expected threshold value and we need to notify people over mail.<br/>
    -> 3 airflow operators used for the script<br/>
