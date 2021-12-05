@@ -24,3 +24,5 @@
       6.) database: Destination database name<br/>
       7.) if_row_exists: 'update' or 'replace'<br/>
       8.) index_col_name: index column name<br/>
+   - Sample Dag File Using this Operator: [Link](https://github.com/abhaypartap12/Airflow/blob/main/dags/ETL_athenna_to_sql.py)<br/>
+
