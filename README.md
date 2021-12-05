@@ -41,4 +41,4 @@
      5.) body: Email body to be sent<br/>
      6.) subject: Email subject<br/>
      7.) receiver: List of Receiver's Email Id<br/>
-   - Sample Dag File Using this Operator: [Link](
+   - Sample Dag File Using this Operator: [Link](https://github.com/abhaypartap12/Airflow/blob/main/dags/ETL_mysql_to_mail.py)<br/>
