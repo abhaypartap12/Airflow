@@ -9,12 +9,13 @@
        2.) PythonOperator: [Link](https://airflow.apache.org/docs/apache-airflow/stable/howto/operator/python.html)<br/>
        3.) send_email_smtp: [Link](https://airflow.apache.org/docs/apache-airflow/stable/howto/email-config.html)<br/>
 
-2.) [operators] Athenna_To_Mysql.py - create pipeline from athenna to MySql<br/>
+2.) [operators] Athenna_To_Mysql.py - create pipeline from athenna to Mysql<br/>
 
    - This can be used as a customized airflow operator to transfer data from athenna to mysql<br/>
    - External Libraries:<br/>
        1.) upsert: [Link](https://pypi.org/project/upsert/)<br/>
        2.) create_engine: [Link](https://docs.sqlalchemy.org/en/14/core/engines.html)<br/>
+       3.) logging: [Link](https://docs.python.org/3/howto/logging.html)<br/>
    - AthennaToMySqlOperator class variables:<br/>
       1.) sql: Query to fetch data from S3 using Athenna Query Engine (source data)<br/>
       2.) mysql_table: Destination Mysql table name<br/>
@@ -26,3 +27,18 @@
       8.) index_col_name: index column name<br/>
    - Sample Dag File Using this Operator: [Link](https://github.com/abhaypartap12/Airflow/blob/main/dags/ETL_athenna_to_sql.py)<br/>
 
+3.) [operators] Mysql_query_to_Email.py - create pipeline to extract data from Mysql and send to Email as Attachment<br/>
+
+   - This can be used as a customized airflow operator to extract data from Mysql and send to Email as Attachment<br/>
+   - External Libraries:<br/>
+       1.) yagmail: [Link](https://github.com/abhaypartap12/python-mini-projects/tree/send_email/projects/Send_Email)<br/>
+       2.) logging: [Link](https://docs.python.org/3/howto/logging.html)<br/>
+   - QueryToMail class variables:<br/>
+     1.) mysql_conn_id: [Link](https://airflow.apache.org/docs/apache-airflow-providers-mysql/stable/connections/mysql.html)<br/>
+     2.) sql_query: Path of Query to fetch data from Mysql DB<br/>
+     3.) archive_name: File name to be stored Inside Zip Folder<br/>
+     4.) file_name: Zip file name to attach in Mail<br/>
+     5.) body: Email body to be sent<br/>
+     6.) subject: Email subject<br/>
+     7.) receiver: List of Receiver's Email Id<br/>
+   - Sample Dag File Using this Operator: [Link](
