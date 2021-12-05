@@ -16,7 +16,7 @@
        1.) upsert: [Link](https://pypi.org/project/upsert/)<br/>
        2.) create_engine: [Link](https://docs.sqlalchemy.org/en/14/core/engines.html)<br/>
    - AthennaToMySqlOperator class variables:<br/>
-      1.) sql: Query to fetch data from S3 using Athenna Query Engine (source data)
+      1.) sql: Query to fetch data from S3 using Athenna Query Engine (source data)<br/>
       2.) mysql_table: Destination Mysql table name<br/>
       3.) aws_conn_id: [Airflow Connections AWS](https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/connections/aws.html)<br/>
       4.) client_type: 's3'<br/>
